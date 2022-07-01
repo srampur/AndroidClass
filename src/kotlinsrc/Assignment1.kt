@@ -19,35 +19,105 @@ fun main() {
             5 -> assignment5()
             6 -> assignment6()
             7 -> assignment7()
-            8 -> assignment8()
             99 -> break
             else -> println("select valid assignments between 1..8 and 99 to exit")
         }
     }
-}
-
-fun assignment8() {
-    println("assignment8 - Not yet implemented")
+    input.close()
 }
 
 fun assignment7() {
-    println("assignment7 - Not yet implemented")
+    val probStmt = """
+        To calculate the sum of following series where n is input by user. 
+        1 + 1/2 + 1/3 + 1/4 + 1/5 +... +1/n
+    """.trimIndent()
+    println("assignment7 - $probStmt")
+
+    println("Enter the value of n")
+    val scan = Scanner(System.`in`)
+    val n = scan.nextInt()
+
+
+
+    scan.close()
 }
 
 fun assignment6() {
-    println("assignment6 - Not yet implemented")
+    val probStmt = """
+        To display Pascal's triangle like right angle traingle.
+        Input number of rows: 7                                               
+        1                                                                      
+        1   1                                                                  
+        1   2   1                                                              
+        1   3   3   1                                                          
+        1   4   6   4   1                                                      
+        1   5   10   10   5   1                                                
+        1   6   15   20   15   6   1
+    """.trimIndent()
+    println("assignment6 - $probStmt")
+
+    println("Enter the value of n")
+    val scan = Scanner(System.`in`)
+    val n = scan.nextInt()
+
+
+
+    scan.close()
 }
 
 fun assignment5() {
-    println("assignment5 - Not yet implemented")
+    val probStmt = """
+        To make such a pattern like a pyramid with numbers increased by 1.
+        Input number of rows: 4                                               
+               1                                                               
+              2 3                                                              
+             4 5 6                                                             
+            7 8 9 10
+    """.trimIndent()
+    println("assignment5 - $probStmt")
+
+    println("Enter the value of n")
+    val scan = Scanner(System.`in`)
+    val n = scan.nextInt()
+
+
+
+    scan.close()
 }
 
 fun assignment4() {
-    println("assignment4 - Not yet implemented")
+    val probStmt = """
+        To make such a pattern like right angle triangle with number increased by 1.
+        Sample op Input number of rows: 4        
+        1                                                                                  
+        2 3                                                                                                         
+        4 5 6                                                                                                       
+        7 8 9 10
+    """.trimIndent()
+    println("assignment4 - $probStmt")
+
+    println("Enter the value of n")
+    val scan = Scanner(System.`in`)
+    val n = scan.nextInt()
+
+
+
+    scan.close()
 }
 
 fun assignment3() {
-    println("assignment3 - Not yet implemented")
+    val probStmt = """
+       Display the sum of the series [ 9 + 99 + 999 + 9999 ...]
+    """.trimIndent()
+    println("assignment3 - $probStmt")
+
+    println("Enter the value of n")
+    val scan = Scanner(System.`in`)
+    val n = scan.nextInt()
+
+
+
+    scan.close()
 }
 
 fun assignment2() {
@@ -72,6 +142,7 @@ fun assignment2() {
         println()
     }
     println()
+    scan.close()
 }
 
 fun assignment1() {
@@ -96,4 +167,5 @@ fun assignment1() {
             computation += " + "
     }
     println("Sum of the $computation series = $sum")
+    scan.close()
 }
