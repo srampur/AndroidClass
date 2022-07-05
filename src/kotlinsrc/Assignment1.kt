@@ -1,6 +1,7 @@
 package kotlinsrc
 
 import java.util.Scanner
+import kotlin.math.pow
 
 class Assignment1 {
 }
@@ -20,7 +21,7 @@ fun main() {
             6 -> assignment6()
             7 -> assignment7()
             99 -> break
-            else -> println("select valid assignments between 1..8 and 99 to exit")
+            else -> println("select valid assignments between 1..7 and 99 to exit")
         }
     }
     input.close()
@@ -35,11 +36,17 @@ fun assignment7() {
 
     println("Enter the value of n")
     val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
+    var n = scan.nextDouble()
+    var sum = 0.0
+    val constant = 1.0
 
+    while (n > 0) {
+        sum += (constant.div(n))
+        n--
+    }
 
-
-    scan.close()
+    println("Sum of the series is $sum")
+    //scan.close()
 }
 
 fun assignment6() {
@@ -58,11 +65,23 @@ fun assignment6() {
 
     println("Enter the value of n")
     val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
+    var n = scan.nextInt()
+    val start = 1 /*start printing from 1*/
+    var step = 1 /*per row print*/
 
+    //TODO Pascal traingle logic, now prints 1 in each row, column
+    while (n > 0) {
+        for (i in 1..step) {
+            print("$start ")
+            //start++
+        }
+        println()
+        n--
+        step++
+    }
+    println()
 
-
-    scan.close()
+    //scan.close()
 }
 
 fun assignment5() {
@@ -78,11 +97,25 @@ fun assignment5() {
 
     println("Enter the value of n")
     val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
+    var n = scan.nextInt()
+    var start = 1 /*start printing from 1*/
+    var step = 1 /*per row print*/
 
+    while (n > 0) {
+        for (j in 1..n) {
+            print(" ")
+        }
+        for (i in 1..step) {
+            print("$start ")
+            start++
+        }
+        println()
+        n--
+        step++
+    }
+    println()
 
-
-    scan.close()
+    //scan.close()
 }
 
 fun assignment4() {
@@ -98,11 +131,21 @@ fun assignment4() {
 
     println("Enter the value of n")
     val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
+    var n = scan.nextInt()
+    var start = 1 /*start printing from 1*/
+    var step = 1 /*per row print*/
 
-
-
-    scan.close()
+    while (n > 0) {
+        for (i in 1..step) {
+            print("$start ")
+            start++
+        }
+        println()
+        n--
+        step++
+    }
+    println()
+    //scan.close()
 }
 
 fun assignment3() {
@@ -113,11 +156,17 @@ fun assignment3() {
 
     println("Enter the value of n")
     val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
+    var n = scan.nextInt()
+    var sum = 0.0
+    val constant = 10
 
+    while (n > 0) {
+        sum += (constant.toDouble().pow(n.toDouble())) - 1
+        --n
+    }
 
-
-    scan.close()
+    //scan.close()
+    println("Sum of n series is $sum")
 }
 
 fun assignment2() {
@@ -132,8 +181,8 @@ fun assignment2() {
     var i = n
     var j = n
 
-    while(i > 0) {
-        while(j > 0) {
+    while (i > 0) {
+        while (j > 0) {
             print('#')
             j--
         }
@@ -142,7 +191,7 @@ fun assignment2() {
         println()
     }
     println()
-    scan.close()
+    //scan.close()
 }
 
 fun assignment1() {
@@ -167,5 +216,5 @@ fun assignment1() {
             computation += " + "
     }
     println("Sum of the $computation series = $sum")
-    scan.close()
+    //scan.close()
 }
